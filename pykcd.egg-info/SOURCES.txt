@@ -1,0 +1,8 @@
+setup.py
+pykcd/__init__.py
+pykcd.egg-info/PKG-INFO
+pykcd.egg-info/SOURCES.txt
+pykcd.egg-info/dependency_links.txt
+pykcd.egg-info/not-zip-safe
+pykcd.egg-info/requires.txt
+pykcd.egg-info/top_level.txt
