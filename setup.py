@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pykcd',
-      version = '0.2.2',
+      version = '0.3.0',
       description = 'Python interface for the XKCD API',
       url = 'http://github.com/JacobLandau/pykcd',
       author = 'Jacob Landau',
