@@ -7,16 +7,16 @@ The strip object can be initialized like so:
 
     Strip = pykcd.XKCDStrip(strip_number)
 
-The full berth of accessors can be found using the help function. Here's a sampling.
+The full berth of properties can be found using the help function. Here's a sampling.
 
 * Alt text
 
-        In [1]: XKCDStrip(50).get_alt_text()
+        In [1]: XKCDStrip(50).alt_text
         Out[1]: 'Of course, Penny Arcade has already mocked themselves for this. They don't care."
 
 * Image link
 
-        In [2]: XKCDStrip(732).get_image_link()
+        In [2]: XKCDStrip(732).image_link
         Out[2]: 'http://imgs.xkcd.com/comics/hdtv.png'
 
 * Downloading Strips
