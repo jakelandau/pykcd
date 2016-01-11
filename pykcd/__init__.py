@@ -19,6 +19,7 @@ class XKCDStrip():
         # The location of the API for the strip
         # Interpolates the strip number into the domain
         self.json_domain = 'http://www.xkcd.com/{}/info.0.json'.format(strip_num)
+        self.user_agent = {'user-agent' : 'pykcd/1.0.0 (+https://github.com/JacobLandau/pykcd/)'}
 
         # Creates the identifiers for each property,
         # so the value can be assigned later, when needed
@@ -50,7 +51,7 @@ class XKCDStrip():
             # This grabs the JSON document and parses it into a dictionary
             # It is saved for here because since the JSON for No. 404
             # doesn't exist, it would fittingly return a 404 error.
-            self.url = requests.get(self.json_domain)
+            self.url = requests.get(self.json_domain, headers={'user-agent':user_agent, 'content-type':'application/json'})
             self.url.raise_for_status()
             self.strip = self.url.json()
 
@@ -70,7 +71,7 @@ class XKCDStrip():
                 # We get the image link for the large version instead
                 # Using a temporary web scraper
                 if 'large' in self.link:
-                    temp_soup = BeautifulSoup(requests.get(self.link).content, 'lxml')
+                    temp_soup = BeautifulSoup(requests.get(self.link, headers={'user-agent':user_agent, 'content-type':'text/html'}).content, 'lxml')
                     link = temp_soup.img
                     self.image_link = link.get('src')
                 else:
