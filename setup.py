@@ -8,5 +8,5 @@ setup(name='pykcd',
     author_email = 'Jacob@PopcornFlicks.ca',
     license = 'MIT',
     packages = ['pykcd'],
-    install_requires = ['BeautifulSoup4', 'requests', 'wget'],
+    install_requires = ['BeautifulSoup4', 'requests', 'wget', 'lxml'],
     zip_safe = False)
